@@ -3,7 +3,7 @@ import speedtest
 import requests 
 from pyrogram import Client, filters  
 from pyrogram.types import Message  
-from config import config, ADMINS 
+from config import Config
  
 @Client.on_message(filters.command("speedtest") & filters.user(Config.ADMIN) & filters.reply)
 async def run_speedtest(client: Bot, message: Message):
