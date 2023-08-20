@@ -1,12 +1,11 @@
 import os 
 import speedtest 
 import wget 
-from pyrogram import filters 
-from pyrogram.types import Message 
-from bot import Bot 
+from pyrogram import Client, filters  
+from pyrogram.types import Message  
 from config import ADMINS 
  
-@Bot.on_message(filters.command("speedtest") & filters.user(ADMINS)) 
+@Client.on_message(filters.command("speedtest") & filters.user(ADMINS)) 
 async def run_speedtest(client: Bot, message: Message): 
     m = await message.reply_text("⚡️ Running Server Speedtest") 
     try: 
