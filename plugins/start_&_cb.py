@@ -63,6 +63,12 @@ async def runban_user(client, message):
 
     await message.reply(f"User with ID {user_id} is unbanned.")
               
+@Client.on_message(filters.private & filters.command("banusers") & filters.user(Config.ADMIN))
+async def list_banned_users(client, message):
+    # Query the database to get the count of banned users
+    banned_count = await db.get_banned_users_count()
+
+    await message.reply(f"Number of users banned by admin: {banned_count}")
 
 @Client.on_callback_query()
 async def cb_handler(client, query: CallbackQuery):
