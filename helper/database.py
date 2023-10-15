@@ -54,10 +54,10 @@ class Database:
         return user.get('caption', None)
 
     async def ban_user(self, user_id):
-        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_banned': True})
+        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_banned': True}})
 
     async def unban_user(self, user_id):
-        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_banned': False})
+        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_banned': False}})
 
     async def is_user_banned(self, user_id):
         user = await self.col.find_one({'_id': int(user_id)})
