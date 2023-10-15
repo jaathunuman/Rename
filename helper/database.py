@@ -10,12 +10,12 @@ class Database:
         self.col = self.db.user
 
     def new_user(self, id):
-        return dict(
-            _id=int(id),                                   
-            file_id=None,
-            caption=None,
-            is_banned=False  # Add a field to track user's ban status
-        )
+        return {
+            '_id': int(id),                                   
+            'file_id': None,
+            'caption': None,
+            'is_banned': False  # Add a field to track user's ban status
+        }
 
     async def add_user(self, b, m):
         u = m.from_user
@@ -68,5 +68,4 @@ class Database:
         banned_users = self.col.find({'is_banned': True})
         return [user['_id'] async for user in banned_users]
 
-
-db = Database(Config.DB_URL, Config.DB_NAME) 
+db = Database(Config.DB_URL, Config.DB_NAME)
