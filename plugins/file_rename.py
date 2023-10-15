@@ -14,9 +14,9 @@ from PIL import Image
 import os, time
 
 
-from pyrogram import Client, filters, force_reply
+from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-from pyrogram.types import Message
+from pyrogram.types import Message, ForceReply
 
 
 @app.on_message(filters.private & (filters.document | filters.audio | filters.video))
