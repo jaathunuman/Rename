@@ -19,7 +19,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import Message, ForceReply
 
 
-@app.on_message(filters.private & (filters.document | filters.audio | filters.video))
+@Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
 async def rename_start(client, message: Message):
     user_id = message.from_user.id
 
