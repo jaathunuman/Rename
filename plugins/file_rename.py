@@ -14,43 +14,57 @@ from PIL import Image
 import os, time
 
 
-@Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
-async def rename_start(client, message):
-    user = message.from_user
-    user_id = user.id
+from pyrogram import Client, filters, force_reply
+from pyrogram.errors import FloodWait
+from pyrogram.types import Message
+
+
+@app.on_message(filters.private & (filters.document | filters.audio | filters.video))
+async def rename_start(client, message: Message):
+    user_id = message.from_user.id
 
     # Check if the user is banned
     is_banned = await db.is_user_banned(user_id)
 
     if is_banned:
-        # Send a message indicating that the user is banned
         await message.reply_text("You are banned by the admin.")
     else:
-        file = getattr(message, message.media.value)
+        file = message.document or message.audio or message.video
         filename = file.file_name
 
-        if file.file_size > 2000 * 1024 * 1024:
-            await message.reply_text("Sorry, this bot doesn't support uploading files bigger than 2GB.")
+        if file.file_size > 4 * 1024 * 1024 * 1024:  # 4GB limit
+            await message.reply_text("Sorry, this bot doesn't support files larger than 4GB.")
         else:
             try:
+                # Ask the user to enter a new file name using ForceReply
                 await message.reply_text(
                     text=f"**__Please enter a new file name...__**\n\n**Old File Name** :- `{filename}`",
-                    reply_to_message_id=message.id,
-                    reply_markup=ForceReply(True)
+                    reply_to_message_id=message.message_id,
+                    reply_markup=force_reply.ForceReply(True)
                 )
-                await sleep(30)
+
+                # Set a timeout for user response
+                await message.reply_text("You have 30 seconds to enter a new file name.")
+                await app.sleep(30)
+
+                # Handle the user's response here
+                # You can use a message handler to capture the response
+                @app.on_message(filters.user(user_id) & filters.reply & filters.text)
+                async def handle_rename_response(_, response: Message):
+                    new_file_name = response.text
+                    # Rename the file here and respond to the user
+
+                    # Remove the handler after use to avoid conflicts
+                    await response.stop()
             except FloodWait as e:
-                await sleep(e.value)
+                await app.sleep(e.x)
                 await message.reply_text(
                     text=f"**__Please enter a new file name...__**\n\n**Old File Name** :- `{filename}`",
-                    reply_to_message_id=message.id,
-                    reply_markup=ForceReply(True)
+                    reply_to_message_id=message.message_id,
+                    reply_markup=force_reply.ForceReply(True)
                 )
             except:
                 pass
-
-
-
 
 @Client.on_message(filters.private & filters.reply)
 async def refunc(client, message):
