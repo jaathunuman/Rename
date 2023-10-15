@@ -13,7 +13,8 @@ class Database:
         return dict(
             _id=int(id),                                   
             file_id=None,
-            caption=None
+            caption=None,
+            is_banned=False  # Add a field to track user's ban status
         )
 
     async def add_user(self, b, m):
@@ -37,7 +38,7 @@ class Database:
 
     async def delete_user(self, user_id):
         await self.col.delete_many({'_id': int(user_id)})
-    
+
     async def set_thumbnail(self, id, file_id):
         await self.col.update_one({'_id': int(id)}, {'$set': {'file_id': file_id}})
 
@@ -52,9 +53,14 @@ class Database:
         user = await self.col.find_one({'_id': int(id)})
         return user.get('caption', None)
 
+    async def ban_user(self, user_id):
+        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_banned': True}})
 
-db = Database(Config.DB_URL, Config.DB_NAME)
+    async def unban_user(self, user_id):
+        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_banned': False}})
 
+    async def is_user_banned(self, user_id):
+        user = await self.col.find_one({'_id': int(user_id)})
+        return user.get('is_banned', False)
 
-
-
+db = Database(Config.DB_URL, Config.DB_NAME) 
