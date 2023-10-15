@@ -1,26 +1,3 @@
-"""
-Apache License 2.0
-Copyright (c) 2022 @PYRO_BOTZ
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Telegram Link : https://t.me/PYRO_BOTZ 
-Repo Link : https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT
-License Link : https://github.com/TEAM-PYRO-BOTZ/PYRO-RENAME-BOT/blob/main/LICENSE
-"""
 
 import random
 from pyrogram import Client, filters
@@ -32,21 +9,60 @@ from config import Config, Txt
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
     user = message.from_user
-    await db.add_user(client, message)                
-    button = InlineKeyboardMarkup([[
-        InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
-        ],[
-        InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/PYRO_BOTZ'),
-        InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/PYRO_BOTZ_CHAT')
-        ],[
-        InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
-    ]])
-    if Config.START_PIC:
-        await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)       
+    user_id = user.id
+
+    # Check if the user is banned
+    is_banned = await db.is_user_banned(user_id)
+
+    if is_banned:
+        # Send a message indicating that the user is banned
+        await message.reply("You are banned by the admin.")
     else:
-        await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
-   
+        # User is not banned, continue with the regular start message
+        await db.add_user(client, message)
+        button = InlineKeyboardMarkup([[
+            InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+            ], [
+            InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜳ', url='https://t.me/PYRO_BOTZ'),
+            InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/PYRO_BOTZ_CHAT')
+            ], [
+            InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
+            InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+        ]])
+        if Config.START_PIC:
+            await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
+        else:
+            await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
+
+# Add these import statements at the top of your code
+from pyrogram.types import Message
+
+@Client.on_message(filters.private & filters.command("rban") & filters.user(Config.ADMIN))
+async def rban_user(client, message):
+    if len(message.command) != 2:
+        await message.reply("Usage: /rban [user_id]")
+        return
+
+    user_id = int(message.command[1])
+
+    # Ban the user in the database
+    await db.ban_user(user_id)
+
+    await message.reply(f"User with ID {user_id} is banned.")
+
+@Client.on_message(filters.private & filters.command("runban") & filters.user(Config.ADMIN))
+async def runban_user(client, message):
+    if len(message.command) != 2:
+        await message.reply("Usage: /runban [user_id]")
+        return
+
+    user_id = int(message.command[1])
+
+    # Unban the user in the database
+    await db.unban_user(user_id)
+
+    await message.reply(f"User with ID {user_id} is unbanned.")
+              
 
 @Client.on_callback_query()
 async def cb_handler(client, query: CallbackQuery):
