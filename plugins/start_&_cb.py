@@ -8,14 +8,14 @@ from config import Config, Txt
 
 
 # Command to add an admin
-@Client.on_message(filters.command("addadmin") & filters.private)
+@Client.on_message(filters.command("addadmin") & filters.user(Config.ADMIN) & filters.private)
 async def add_admin(client, message):
     user_id = message.from_user.id
     await db.add_admin(user_id)
     await message.reply_text("User has been added as an admin.")
 
 # Command to remove an admin
-@Client.on_message(filters.command("rmadmin") & filters.private)
+@Client.on_message(filters.command("rmadmin") & filters.user(Config.ADMIN) & filters.private)
 async def remove_admin(client, message):
     user_id = message.from_user.id
     await db.remove_admin(user_id)
