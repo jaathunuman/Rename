@@ -37,8 +37,8 @@ class Database:
         all_users = self.col.find({})
         return all_users
 
-    async def delete_user(self, user_id):
-        await self.col.delete_many({'_id': int(user_id})
+    async def delete_user(self, user_id):       
+        await self.col.delete_many({'_id': int(user_id)})
 
     async def set_thumbnail(self, id, file_id):
         await self.col.update_one({'_id': int(id)}, {'$set': {'file_id': file_id}})
