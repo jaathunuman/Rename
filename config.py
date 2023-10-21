@@ -57,12 +57,19 @@ Tʜɪs Bᴏᴛ Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ : @BIackHatDev 💞</b>"""
 Exᴀᴍᴩʟᴇ:- /set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 💾 Sɪᴢᴇ: {filesize}
 ⏰ Dᴜʀᴀᴛɪᴏɴ: {duration}
+
+👮 Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs
+• /addadmin [ᴜsᴇʀ_ɪᴅ] - Aᴅᴅ ᴀ ᴜsᴇʀ ᴀs ᴀɴ ᴀᴅᴍɪɴ.
+• /rmadmin [ᴜsᴇʀ_ɪᴅ] - Rᴇᴍᴏᴠᴇ ᴀᴅᴍɪɴ sᴛᴀᴛᴜs ғʀᴏᴍ ᴀ ᴜsᴇʀ.
+• /ban [ᴜsᴇʀ_ɪᴅ] - Bᴀɴ ᴀ ᴜsᴇʀ.
+• /unban [ᴜsᴇʀ_ɪᴅ] - Uɴʙᴀɴ ᴀ ᴜsᴇʀ.
+
 ✏️ <b><u>Hᴏᴡ Tᴏ Rᴇɴᴀᴍᴇ A Fɪʟᴇ</u></b>
 <b>•></b> Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nɴᴀᴍᴇ \nAɴᴅ Aᴇʟᴇᴄᴛ Tʜᴇ Fᴏʀᴍᴀᴛ [ document, video, audio ].           
 """
 
 #⚠️ Dᴏɴ'ᴛ Rᴇᴍᴏᴠᴇ Oᴜʀ Cʀᴇᴅɪᴛꜱ @ᴩyʀᴏ_ʙᴏᴛᴢ🙏🥲
-    DEV_TXT = """<b><u>HᴇHᴇ Vʀᴏᴏ Oғᴄ Mᴇ </b></u>
+    DEV_TXT = """<b><u>Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ. me</b></u>
  """
 
     PROGRESS_BAR = """<b>\n
