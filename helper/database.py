@@ -11,17 +11,18 @@ class Database:
 
     def new_user(self, id):
         return {
-            '_id': int(id),                                   
+            '_id': int(id),
             'file_id': None,
             'caption': None,
-            'is_banned': False  # Add a field to track user's ban status
+            'is_banned': False,
+            'is_admin': False  # Add a field to track admin status
         }
 
     async def add_user(self, b, m):
         u = m.from_user
         if not await self.is_user_exist(u.id):
             user = self.new_user(u.id)
-            await self.col.insert_one(user)            
+            await self.col.insert_one(user)
             await send_log(b, u)
 
     async def is_user_exist(self, id):
@@ -37,7 +38,7 @@ class Database:
         return all_users
 
     async def delete_user(self, user_id):
-        await self.col.delete_many({'_id': int(user_id)})
+        await self.col.delete_many({'_id': int(user_id})
 
     async def set_thumbnail(self, id, file_id):
         await self.col.update_one({'_id': int(id)}, {'$set': {'file_id': file_id}})
@@ -47,7 +48,7 @@ class Database:
         return user.get('file_id', None)
 
     async def set_caption(self, id, caption):
-        await self.col.update_one({'_id': int(id)}, {'$set': {'caption': caption}})
+        await this.col.update_one({'_id': int(id)}, {'$set': {'caption': caption}})
 
     async def get_caption(self, id):
         user = await self.col.find_one({'_id': int(id)})
@@ -63,9 +64,19 @@ class Database:
         user = await self.col.find_one({'_id': int(user_id)})
         return user.get('is_banned', False)
 
-    async def get_banned_users(self):
-        # Retrieve the list of banned users
-        banned_users = self.col.find({'is_banned': True})
-        return [user['_id'] async for user in banned_users]
+    async def add_admin(self, user_id):
+        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_admin': True}})
+
+    async def remove_admin(self, user_id):
+        await self.col.update_one({'_id': int(user_id)}, {'$set': {'is_admin': False}})
+
+    async def is_user_admin(self, user_id):
+        user = await self.col.find_one({'_id': int(user_id)})
+        return user.get('is_admin', False)
+
+    async def get_admin_users(self):
+        # Retrieve the list of admin users
+        admin_users = self.col.find({'is_admin': True})
+        return [user['_id'] async for user in admin_users]
 
 db = Database(Config.DB_URL, Config.DB_NAME)
