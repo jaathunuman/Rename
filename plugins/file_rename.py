@@ -31,11 +31,18 @@ async def rename_start(client, message):
         # Send a message indicating that the user is banned
         await message.reply_text("You are banned by the admin.")
     else:
+        while not await db.is_user_admin(user_id):
+            await message.reply_text("You are not authorized to use this feature. To gain authorization, please message owner @BIackHatDev")
+            await asyncio.sleep(60)  # Wait for a minute before checking again
+            user = await client.get_users(user_id)
+            user_id = user.id  # Refresh the user's ID
+
+        # If the user becomes an admin, they can proceed with the renaming process
         file = getattr(message, message.media.value)
         filename = file.file_name
 
-        if file.file_size > 4 * 1024 * 1024 * 1024:
-            await message.reply_text("Sorry, this bot doesn't support uploading files bigger than 4GB.")
+        if file.file_size > 1024 * 1024 * 1024:
+            await message.reply_text("Sorry, this bot doesn't support uploading files bigger than 2GB.")
         else:
             try:
                 await message.reply_text(
@@ -50,7 +57,7 @@ async def rename_start(client, message):
                     text=f"**__Please enter a new file name...__**\n\n**Old File Name** :- `{filename}`",
                     reply_to_message_id=message.id,
                     reply_markup=ForceReply(True)
-                )
+		)
             except:
                 pass 
 
