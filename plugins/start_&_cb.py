@@ -4,8 +4,23 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, CallbackQuery
 from helper.database import db
 from config import Config, Txt  
-  
 
+
+
+# Command to add an admin
+@Client.on_message(filters.command("addadmin") & filters.private)
+async def add_admin(client, message):
+    user_id = message.from_user.id
+    await db.add_admin(user_id)
+    await message.reply_text("User has been added as an admin.")
+
+# Command to remove an admin
+@Client.on_message(filters.command("rmadmin") & filters.private)
+async def remove_admin(client, message):
+    user_id = message.from_user.id
+    await db.remove_admin(user_id)
+    await message.reply_text("User has been removed as an admin.")
+  
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):
     user = message.from_user
@@ -37,7 +52,7 @@ async def start(client, message):
 # Add these import statements at the top of your code
 from pyrogram.types import Message
 
-@Client.on_message(filters.private & filters.command("rban") & filters.user(Config.ADMIN))
+@Client.on_message(filters.private & filters.command("ban") & filters.user(Config.ADMIN))
 async def rban_user(client, message):
     if len(message.command) != 2:
         await message.reply("Usage: /rban [user_id]")
@@ -50,7 +65,7 @@ async def rban_user(client, message):
 
     await message.reply(f"User with ID {user_id} is banned.")
 
-@Client.on_message(filters.private & filters.command("runban") & filters.user(Config.ADMIN))
+@Client.on_message(filters.private & filters.command("unban") & filters.user(Config.ADMIN))
 async def runban_user(client, message):
     if len(message.command) != 2:
         await message.reply("Usage: /runban [user_id]")
