@@ -75,12 +75,13 @@ Example: /set_caption 📕 File Name: {filename}
 """
 
 
-    PROGRESS_BAR = """╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
+    PROGRESS_BAR = """\n
+╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
 ┣⪼ 🗃️ Size: {1} | {2}
 ┣⪼ ⏳ Done : {0}%
 ┣⪼ 🚀 Speed: {3}/s
 ┣⪼ ⏰ Eᴛᴀ: {4}
-┣⪼ 🌟 Keep Going! You're Almost There.
+┣⪼ 🌟 Keep Going! 
 ╰━━━━━━━━━━━━━━━➣ 
 """
 
