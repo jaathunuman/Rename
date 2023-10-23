@@ -168,7 +168,5 @@ async def doc(bot, update):
     if ph_path:
         os.remove(ph_path)
 
-    # Send a message to the user and wait for 15 seconds before processing the next file
-    await app.send_message(user_id, "File processed successfully. Next file will be processed in 15 seconds.")
-    await sleep(15)
+   
 
