@@ -50,7 +50,7 @@ async def start(client, message):
                 InlineKeyboardButton('🎛 About', callback_data='about'),
                 InlineKeyboardButton('🛠 Help', callback_data='help')
                 ],[               
-                InlineKeyboardButton('📯 Updates', url='https://t.me/illuminatiXNetwork')            
+                InlineKeyboardButton('📯 Updates', url='https://t.me/Emperors_Network')            
         ]])
         
         # Assuming you have a video file named 'start_video.mp4' in the same directory as your script
@@ -102,7 +102,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton('🎛 About', callback_data='about'),
                 InlineKeyboardButton('🛠 Help', callback_data='help')
                 ],[               
-                InlineKeyboardButton('📯 Updates', url='https://t.me/illuminatiXNetwork')
+                InlineKeyboardButton('📯 Updates', url='https://t.me/Emperors_Network')
             ]])
         )
     elif data == "help":
