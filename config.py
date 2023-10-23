@@ -28,56 +28,67 @@ class Config(object):
 
 class Txt(object):
     # part of text configuration
-    START_TXT = """<b>Hᴀɪ {} 👋
-Tʜɪs Is Aɴ Aᴅᴠᴀɴᴄᴇᴅ Aɴᴅ Yᴇᴛ Pᴏᴡᴇʀꜰᴜʟ Rᴇɴᴀᴍᴇ Bᴏᴛ
-Usɪɴɢ Tʜɪs Bᴏᴛ Yᴏᴜ Cᴀɴ Rᴇɴᴀᴍᴇ & Cʜᴀɴɢᴇ Tʜᴜᴍʙɴᴀɪʟ Oꜰ Yᴏᴜʀ Fɪʟᴇ
-Yᴏᴜ Cᴀɴ Aʟsᴏ Cᴏɴᴠᴇʀᴛ Vɪᴅᴇᴏ Tᴏ Fɪʟᴇ & Fɪʟᴇ Tᴏ Vɪᴅᴇᴏ
-Tʜɪs Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛs Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ Aɴᴅ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ
-Tʜɪs Bᴏᴛ Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ : @BIackHatDev 💞</b>"""
+    START_TXT = """<b>Welcome {} 👋
+This is a powerful Rename Bot.
+With this bot, you can rename and change the thumbnail of your files.
+You can also convert video to file & file to video.
+Custom thumbnail and caption support.
+Bot created by: @BIackHatDev 💞</b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
-├🤖 ᴍy ɴᴀᴍᴇ : {}
-├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : <a href=https://t.me/BIackHatDev>BʟᴀᴄᴋHᴀᴛDᴇᴠ</a> 
-├📕 Lɪʙʀᴀʀy : <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
-├✏️ Lᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>Pyᴛʜᴏɴ 3</a>
-├💾 Dᴀᴛᴀ Bᴀꜱᴇ: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
-├📊 Bᴜɪʟᴅ Vᴇʀꜱɪᴏɴ: `V4.7.0`    
+├🤖 My name: Kakashi Hatake
+├🖥️ Developers: <a href=https://t.me/BIackHatDev>BʟᴀᴄᴋHᴀᴛDᴇᴠ</a> 
+├📕 Library: <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
+├✏️ Language: <a href=https://www.python.org>Pyᴛʜᴏɴ 3</a>
+├💾 Data Base: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
+├📊 Build Version: `V4.7.0`
+├🔗 GitHub: <a href=https://github.com/illuminati-Dev>GitHub</a>
+├📧 Contact: <a href=https://Instagram.com/itz_kunu_g>Contact Me</a>
 ╰───────────────⍟ """
 
+
     HELP_TXT = """
-🌌 <b><u>Hᴏᴡ Tᴏ Sᴇᴛ Tʜᴜᴍʙɴɪʟᴇ</u></b>
+🌌 How To Set Thumbnail
   
-<b>•></b> /start Tʜᴇ Bᴏᴛ Aɴᴅ Sᴇɴᴅ Aɴy Pʜᴏᴛᴏ Tᴏ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟy Sᴇᴛ Tʜᴜᴍʙɴɪʟᴇ.
-<b>•></b> /del_thumb Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Oʟᴅ Tʜᴜᴍʙɴɪʟᴇ.
-<b>•></b> /view_thumb Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Tʜᴜᴍʙɴɪʟᴇ.
-📑 <b><u>Hᴏᴡ Tᴏ Sᴇᴛ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ</u></b>
-<b>•></b> /set_caption - Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Sᴇᴛ ᴀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-<b>•></b> /see_caption - Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Vɪᴇᴡ Yᴏᴜʀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-<b>•></b> /del_caption - Uꜱᴇ Tʜɪꜱ Cᴏᴍᴍᴀɴᴅ Tᴏ Dᴇʟᴇᴛᴇ Yᴏᴜʀ Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ
-Exᴀᴍᴩʟᴇ:- /set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
-💾 Sɪᴢᴇ: {filesize}
-⏰ Dᴜʀᴀᴛɪᴏɴ: {duration}
+• /start the bot and send any photo to automatically set the thumbnail.
+• /del_thumb to delete your old thumbnail.
+• /view_thumb to view your current thumbnail.
 
-👮 Aᴅᴍɪɴ Cᴏᴍᴍᴀɴᴅs
-• /addadmin [ᴜsᴇʀ_ɪᴅ] - Aᴅᴅ ᴀ ᴜsᴇʀ ᴀs ᴀɴ ᴀᴅᴍɪɴ.
-• /rmadmin [ᴜsᴇʀ_ɪᴅ] - Rᴇᴍᴏᴠᴇ ᴀᴅᴍɪɴ sᴛᴀᴛᴜs ғʀᴏᴍ ᴀ ᴜsᴇʀ.
-• /ban [ᴜsᴇʀ_ɪᴅ] - Bᴀɴ ᴀ ᴜsᴇʀ.
-• /unban [ᴜsᴇʀ_ɪᴅ] - Uɴʙᴀɴ ᴀ ᴜsᴇʀ.
+📑 How To Set Custom Caption
+• /set_caption - Use this command to set a custom caption.
+• /see_caption - Use this command to view your custom caption.
+• /del_caption - Use this command to delete your custom caption.
+Example: /set_caption 📕 File Name: {filename}
+💾 Size: {filesize}
+⏰ Duration: {duration}
 
-✏️ <b><u>Hᴏᴡ Tᴏ Rᴇɴᴀᴍᴇ A Fɪʟᴇ</u></b>
-<b>•></b> Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nɴᴀᴍᴇ \nAɴᴅ Aᴇʟᴇᴄᴛ Tʜᴇ Fᴏʀᴍᴀᴛ [ document, video, audio ].           
+👮 Admin Commands
+• /addadmin [user_id] - Add a user as an admin.
+• /rmadmin [user_id] - Remove admin status from a user.
+• /ban [user_id] - Ban a user.
+• /unban [user_id] - Unban a user.
+
+✏️ How To Rename A File
+• Send any file and type the new file name and select the format [document, video, audio].
 """
 
-#⚠️ Dᴏɴ'ᴛ Rᴇᴍᴏᴠᴇ Oᴜʀ Cʀᴇᴅɪᴛꜱ @ᴩyʀᴏ_ʙᴏᴛᴢ🙏🥲
-    DEV_TXT = """<b><u>Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ. me</b></u>
- """
+
+DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ.</u></b>
+<b><u>🚀 Dive into the world of code and innovation!</u></b>
+<b><u>👨‍💻 Crafted with ❤️ by @BIackHatDev</u></b>
+<b><u>🔗 Explore our GitHub repository: <a href="https://github.com/illuminati-Dev">GitHub</a></u></b>
+"""
+
 
     PROGRESS_BAR = """<b>\n
 ╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
-┣⪼ 🗃️ Sɪᴢᴇ: {1} | {2}
-┣⪼ ⏳️ Dᴏɴᴇ : {0}%
-┣⪼ 🚀 Sᴩᴇᴇᴅ: {3}/s
-┣⪼ ⏰️ Eᴛᴀ: {4}
-╰━━━━━━━━━━━━━━━➣ </b>"""
+┣⪼ 🗃️ Size: {1} | {2}
+┣⪼ ⏳ Done : {0}%
+┣⪼ 🚀 Speed: {3}/s
+┣⪼ ⏰ Eᴛᴀ: {4}
+┣⪼ 🌟 Keep Going! You're Almost There.
+╰━━━━━━━━━━━━━━━➣ </b>
+"""
+
 
 
