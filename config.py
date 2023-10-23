@@ -38,7 +38,7 @@ class Txt(object):
 ├💾 Data Base: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
 ├📊 Build Version: `KH V4.7.0`
 ├🔗 GitHub: <a href=https://github.com/illuminati-Dev>GitHub</a>
-├📧 Contact: <a href=https://Instagram.com/itz_kunu_g>Contact Me</a>
+├📧 Contact: <a href=https://Instagram.com/>Soon</a>
 ╰───────────────⍟ """
 
 
