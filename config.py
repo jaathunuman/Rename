@@ -28,12 +28,7 @@ class Config(object):
 
 class Txt(object):
     # part of text configuration
-    START_TXT = """<b>Welcome {} 👋
-This is a powerful Rename Bot.
-With this bot, you can rename and change the thumbnail of your files.
-You can also convert video to file & file to video.
-Custom thumbnail and caption support.
-Bot created by: @BIackHatDev 💞</b>"""
+    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more. Crafted by <a href=https://t.me/BIackHatDev>Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a> "</b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 My name: <a href=http://t.me/KakashiHatake_xBot>Kᴀᴋᴀsʜɪ Hᴀᴛᴀᴋᴇ</a>
@@ -63,10 +58,10 @@ Example: /set_caption 📕 File Name: {filename}
 ⏰ Duration: {duration}
 
 👮 Admin Commands
-• /addadmin [user_id] - Add a user as an admin.
-• /rmadmin [user_id] - Remove admin status from a user.
-• /ban [user_id] - Ban a user.
-• /unban [user_id] - Unban a user.
+• /addadmin (user_id) - Add a user as an admin.
+• /rmadmin (user_id) - Remove admin status from a user.
+• /ban (user_id) - Ban a user.
+• /unban (user_id) - Unban a user.
 
 ✏️ How To Rename A File
 • Send any file and type the new file name and select the format [document, video, audio].
