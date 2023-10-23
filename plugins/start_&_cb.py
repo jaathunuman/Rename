@@ -54,9 +54,9 @@ async def start(client, message):
         ]])
         
         # Assuming you have a video file named 'start_video.mp4' in the same directory as your script
-        video_path = 'https://graph.org/file/e8b7439b7482e3ee0678e.mp4'
+        START_VID = 'https://graph.org/file/e8b7439b7482e3ee0678e.mp4'
         
-        await message.reply_video(video_path, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
+        await message.reply_video(START_VID, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
 
 
 # Add these import statements at the top of your code
@@ -65,7 +65,7 @@ from pyrogram.types import Message
 @Client.on_message(filters.private & filters.command("ban") & filters.user(Config.ADMIN))
 async def rban_user(client, message):
     if len(message.command) != 2:
-        await message.reply("Usage: /rban [user_id]")
+        await message.reply("Usage: /ban (user_id)")
         return
 
     user_id = int(message.command[1])
@@ -78,7 +78,7 @@ async def rban_user(client, message):
 @Client.on_message(filters.private & filters.command("unban") & filters.user(Config.ADMIN))
 async def runban_user(client, message):
     if len(message.command) != 2:
-        await message.reply("Usage: /runban [user_id]")
+        await message.reply("Usage: /unban (user_id)")
         return
 
     user_id = int(message.command[1])
@@ -88,12 +88,6 @@ async def runban_user(client, message):
 
     await message.reply(f"User with ID {user_id} is unbanned.")
               
-@Client.on_message(filters.private & filters.command("banusers") & filters.user(Config.ADMIN))
-async def list_banned_users(client, message):
-    # Query the database to get the count of banned users
-    banned_count = await db.get_banned_users_count()
-
-    await message.reply(f"Number of users banned by admin: {banned_count}")
 
 @Client.on_callback_query()
 async def cb_handler(client, query: CallbackQuery):
