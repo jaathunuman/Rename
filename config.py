@@ -68,14 +68,14 @@ Example: /set_caption 📕 File Name: {filename}
 """
 
 
-DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ.</u></b>
+    DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ.</u></b>
 <b><u>🚀 Dive into the world of code and innovation!</u></b>
 <b><u>👨‍💻 Crafted with ❤️ by @BIackHatDev</u></b>
 <b><u>🔗 Explore our GitHub repository: <a href="https://github.com/illuminati-Dev">GitHub</a></u></b>
 """
 
 
-PROGRESS_BAR = """╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
+    PROGRESS_BAR = """╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
 ┣⪼ 🗃️ Size: {1} | {2}
 ┣⪼ ⏳ Done : {0}%
 ┣⪼ 🚀 Speed: {3}/s
