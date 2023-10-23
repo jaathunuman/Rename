@@ -44,13 +44,13 @@ async def start(client, message):
     else:
         # User is not banned, continue with the regular start message
         await db.add_user(client, message)
-        button = InlineKeyboardMarkup([[
-            InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
-            ], [
-            InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜳ', url='https://t.me/illuminatiXNetwork')      
-            ], [
-            InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-            InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+        button = InlineKeyboardMarkup([[            
+            InlineKeyboardButton("👨‍💻 Devs 👨‍💻", callback_data='dev')
+                ],[
+                InlineKeyboardButton('🎛 About', callback_data='about'),
+                InlineKeyboardButton('🛠 Help', callback_data='help')
+                ],[               
+                InlineKeyboardButton('📯 Updates', url='https://t.me/illuminatiXNetwork')            
         ]])
         
         # Assuming you have a video file named 'start_video.mp4' in the same directory as your script
@@ -103,12 +103,12 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.START_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup = InlineKeyboardMarkup([[
-                InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+                InlineKeyboardButton("👨‍💻 Devs 👨‍💻", callback_data='dev')
                 ],[
-                InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/illuminatiXNetwork')
-                ],[
-                InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-                InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+                InlineKeyboardButton('🎛 About', callback_data='about'),
+                InlineKeyboardButton('🛠 Help', callback_data='help')
+                ],[               
+                InlineKeyboardButton('📯 Updates', url='https://t.me/illuminatiXNetwork')
             ]])
         )
     elif data == "help":
@@ -116,13 +116,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.HELP_TXT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/")
-                ],[
-                InlineKeyboardButton("❤️‍🔥 Hᴏᴡ Tᴏ Uꜱᴇ❤️‍🔥", url='https://youtube.com')
-                ],[
-                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("🔒 Close", callback_data = "close"),
+                InlineKeyboardButton("◀️ Back", callback_data = "start")
             ]])            
         )
     elif data == "about":
@@ -130,13 +125,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.ABOUT_TXT.format(client.mention),
             disable_web_page_preview = True,
             reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com")
-                ],[
-                InlineKeyboardButton("🖥️ Hᴏᴡ Tᴏ Mᴀᴋᴇ", url="https://youtube.com")
-                ],[
-                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("🔒 Close", callback_data = "close"),
+                InlineKeyboardButton("◀️ Back", callback_data = "start")
             ]])            
         )
     elif data == "dev":
@@ -144,13 +134,8 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.DEV_TXT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                #⚠️ don't change source code & source link ⚠️ #
-                InlineKeyboardButton("❣️ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com")
-                ],[
-                InlineKeyboardButton("🖥️ Hᴏᴡ Tᴏ Mᴀᴋᴇ", url="https://youtube.com")
-                ],[
-                InlineKeyboardButton("🔒 Cʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("◀️ Bᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("🔒 Close", callback_data = "close"),
+                InlineKeyboardButton("◀️ Back", callback_data = "start")
             ]])          
         )
     elif data == "close":
