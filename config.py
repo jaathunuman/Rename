@@ -16,7 +16,7 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/013c17b6d7df18bbeb84c.jpg")
+    START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/e8b7439b7482e3ee0678e.mp4")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6299128233 6265459491').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001958904878"))
@@ -36,12 +36,12 @@ Custom thumbnail and caption support.
 Bot created by: @BIackHatDev 💞</b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
-├🤖 My name: Kakashi Hatake
+├🤖 My name: <a href=http://t.me/KakashiHatake_xBot>Kᴀᴋᴀsʜɪ Hᴀᴛᴀᴋᴇ</a>
 ├🖥️ Developers: <a href=https://t.me/BIackHatDev>BʟᴀᴄᴋHᴀᴛDᴇᴠ</a> 
 ├📕 Library: <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
-├✏️ Language: <a href=https://www.python.org>Pyᴛʜᴏɴ 3</a>
+├✏️ Language: <a href=https://www.python.org>Pyᴛʜᴏɴ3</a>
 ├💾 Data Base: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
-├📊 Build Version: `V4.7.0`
+├📊 Build Version: `KH V4.7.0`
 ├🔗 GitHub: <a href=https://github.com/illuminati-Dev>GitHub</a>
 ├📧 Contact: <a href=https://Instagram.com/itz_kunu_g>Contact Me</a>
 ╰───────────────⍟ """
