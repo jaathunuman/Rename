@@ -28,7 +28,7 @@ class Config(object):
 
 class Txt(object):
     # part of text configuration
-    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more. Crafted by <a href=https://t.me/BIackHatDev>Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a> "</b>"""
+    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more.\n\n• Crafted by <a href=https://t.me/BIackHatDev>Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a> </b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 My name: <a href=http://t.me/KakashiHatake_xBot>Kᴀᴋᴀsʜɪ Hᴀᴛᴀᴋᴇ</a>
