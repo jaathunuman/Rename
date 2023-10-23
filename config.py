@@ -80,7 +80,7 @@ DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏ�
 """
 
 
-    PROGRESS_BAR = """<b>\n
+    PROGRESS_BAR = """<b>
 ╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
 ┣⪼ 🗃️ Size: {1} | {2}
 ┣⪼ ⏳ Done : {0}%
