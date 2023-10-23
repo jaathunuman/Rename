@@ -52,10 +52,12 @@ async def start(client, message):
             InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
             InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
         ]])
-        if Config.START_PIC:
-            await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
-        else:
-            await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
+        
+        # Assuming you have a video file named 'start_video.mp4' in the same directory as your script
+        video_path = 'https://graph.org/file/e8b7439b7482e3ee0678e.mp4'
+        
+        await message.reply_video(video_path, caption=Txt.START_TXT.format(user.mention), reply_markup=button)
+
 
 # Add these import statements at the top of your code
 from pyrogram.types import Message
