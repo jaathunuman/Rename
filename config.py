@@ -76,7 +76,7 @@ Example: /set_caption 📕 File Name: {filename}
 
 
     PROGRESS_BAR = """\n
-╭━━━━❰ᴘʀᴏɢʀᴇss ʙᴀʀ❱━➣
+╭━━━━❰Progress Bar❱━➣
 ┣⪼ 🗃️ Size: {1} | {2}
 ┣⪼ ⏳ Done : {0}%
 ┣⪼ 🚀 Speed: {3}/s
