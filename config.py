@@ -38,7 +38,7 @@ class Txt(object):
 ├💾 Data Base: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
 ├📊 Build Version: `KH V4.7.0`
 ├🔗 GitHub: <a href=https://github.com/illuminati-Dev>GitHub</a>
-├📧 Contact: <a href=https://Instagram.com/>Soon</a>
+├📧 Contact: <a href=https://telegram.com/>Soon</a>
 ╰───────────────⍟ """
 
 
@@ -69,9 +69,10 @@ Example: /set_caption 📕 File Name: {filename}
 
 
     DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ.</u></b>\n
-<b><u>🚀 Dive into the world of code and innovation!</u></b>\n
-<b><u>👨‍💻 Crafted with ❤️ by @BIackHatDev</u></b>\n
-<b><u>🔗 Explore our GitHub repository: <a href="https://github.com/illuminati-Dev">GitHub</a></u></b>
+<b>🚀 Dive into the world of code and innovation!</b>\n
+<b>👨‍💻 Crafted with ❤️ by <a href="BIackHatDev.t.me">Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a></b>\n
+<b>🔷 Brother: <a href="The_NanamiiKento.t.me">𝙽 𝙰 𝙽 𝙰 𝙼 𝙸</a></b>
+<b>🔗 GitHub: <a href="https://github.com/illuminati-Dev">GitHub</a></b>
 """
 
 
