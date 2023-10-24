@@ -69,10 +69,16 @@ Example: /set_caption 📕 File Name: {filename}
 
 
     DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ.</u></b>\n
-<b>🚀 Dive into the world of code and innovation!</b>\n
-<b>👨‍💻 Crafted with ❤️ by <a href="BIackHatDev.t.me">Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a></b>\n
-<b>🔷 Brother: <a href="The_NanamiiKento.t.me">𝙽 𝙰 𝙽 𝙰 𝙼 𝙸</a></b>
-<b>🔗 GitHub: <a href="https://github.com/illuminati-Dev">GitHub</a></b>
+╭───────────⍟
+├<b>👨‍💻 Dev : <a href="BIackHatDev.t.me">Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a></b>\n
+├<b>🔷 Brother: <a href="The_NanamiiKento.t.me">𝙽 𝙰 𝙽 𝙰 𝙼 𝙸</a></b>
+├<b>🔷 Brother: <a href="NuMbEr03AnUrAg.t.me">©《@NUR∆G》™ 𝘽𝙀𝙉 𝟏𝟎</a></b>
+├<b>🔷 Brother: <a href="RomeoSama.t.me">Ꮢσᴍᴇᴏ 𝐒αᴍᴀ</a></b>
+├<b>🔷 Brother: <a href="Shin_Shivaay.t.me">SASUKE 『सर्वेक्षण कोर</a></b>
+├<b>🔷 Brother: <a href="Zoro_RTX.t.me">Zoro</a></b>
+├<b>🔷 Brother: <a href="Theharxhu.t.me">Harxhu</a></b>
+├<b>🔷 Brother: <a href="Trippy_xt.t.me">⚚ 𝐓𝐑𝐈𝐏𝐏𝐘 ❄️</a></b>
+╰───────────────⍟
 """
 
 
