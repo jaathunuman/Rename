@@ -8,7 +8,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "16743442")
     API_HASH  = os.environ.get("API_HASH", "12bbd720f4097ba7713c5e40a11dfd2a")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6720527939:AAG-F8FscoXfu-qzSCcXZmUOhtLsZZHnTjk") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6724874786:AAEiMemuDRlin5w_6LJ6U29bAnLFAZzhXro") 
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","kakashi")     
@@ -31,8 +31,8 @@ class Txt(object):
     START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more.\n• Crafted by <a href=https://t.me/BIackHatDev>Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a> </b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
-├🤖 My name: <a href=http://t.me/KakashiHatake_xBot>Kᴀᴋᴀsʜɪ Hᴀᴛᴀᴋᴇ</a>
-├🖥️ Developers: <a href=https://t.me/BIackHatDev>BʟᴀᴄᴋHᴀᴛDᴇᴠ</a> 
+├🤖 My name: <a href=http://t.me/Gojo_Rename_bot>Gojo satoru</a>
+├🖥️ Developers: <a href=https://t.me/Jaat_Hunuman_Bhakat>🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a> 
 ├📕 Library: <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
 ├✏️ Language: <a href=https://www.python.org>Pyᴛʜᴏɴ3</a>
 ├💾 Data Base: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
@@ -70,14 +70,14 @@ Example: /set_caption 📕 File Name: {filename}
 
     DEV_TXT = """<b><u>🌟 Cᴏᴅᴇ ɪs ʟɪᴋᴇ ʜᴜᴍᴏʀ. Wʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴇxᴘʟᴀɪɴ ɪᴛ, ɪᴛ’s ʙᴀᴅ.</u></b>\n
 ╭───────────⍟
-├<b>👨‍💻 Dev : <a href="BIackHatDev.t.me">Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a></b>
-├<b>🔷 Brother: <a href="The_NanamiiKento.t.me">𝙽 𝙰 𝙽 𝙰 𝙼 𝙸</a></b>
-├<b>🔷 Brother: <a href="NuMbEr03AnUrAg.t.me">©《@NUR∆G》™ 𝘽𝙀𝙉𝟏𝟎</a></b>
-├<b>🔷 Brother: <a href="RomeoSama.t.me">Ꮢσᴍᴇᴏ 𝐒αᴍᴀ</a></b>
-├<b>🔷 Brother: <a href="Shin_Shivaay.t.me">SASUKE 『सर्वेक्षण कोर</a></b>
-├<b>🔷 Brother: <a href="Zoro_RTX.t.me">Zoro</a></b>
-├<b>🔷 Brother: <a href="Theharxhu.t.me">Harxhu</a></b>
-├<b>🔷 Brother: <a href="Trippy_xt.t.me">⚚ 𝐓𝐑𝐈𝐏𝐏𝐘 ❄️</a></b>
+├<b>👨‍💻 Dev : <a href="Jaat_Hunuman_Bhakat.t.me">🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a></b>
+├<b>🔷 Brother: <a href="Jaat_Ghost_Owner.t.me">×‌× Mʀ. Jᴀᴀᴛ ᴀʟᴏɴᴇ »⃟🦅</a></b>
+├<b>🔷 Brother: <a href="3AnUrAg.t.me">©《@NUR∆G》™ Nothing</a></b>
+├<b>🔷 Brother: <a href="eoSama.t.me">Nothing</a></b>
+├<b>🔷 Brother: <a href="Shivaay.t.me">nothing </a></b>
+├<b>🔷 Brother: <a href="RTX.t.me">Nothing</a></b>
+├<b>🔷 Brother: <a href="The.t.me">Nothing</a></b>
+├<b>🔷 Brother: <a href="T.t.me">⚚ Nothing</a></b>
 ╰───────────────⍟
 """
 
