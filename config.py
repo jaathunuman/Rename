@@ -6,8 +6,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "16743442")
-    API_HASH  = os.environ.get("API_HASH", "12bbd720f4097ba7713c5e40a11dfd2a")
+    API_ID    = os.environ.get("API_ID", "22071527")
+    API_HASH  = os.environ.get("API_HASH", "7a144f1eb4c0ef296ac0aef8c74d1e76")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "6724874786:AAEiMemuDRlin5w_6LJ6U29bAnLFAZzhXro") 
    
     # database config
@@ -28,7 +28,7 @@ class Config(object):
 
 class Txt(object):
     # part of text configuration
-    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more.\n• Crafted by <a href=https://t.me/BIackHatDev>Bʟᴀᴄᴋ Hᴀᴛ Dᴇᴠ</a> </b>"""
+    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more.\n• Crafted by <a href=https://t.me/Jaat_Hunuman_Bhakat>🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a> </b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 My name: <a href=http://t.me/Gojo_Rename_bot>Gojo satoru</a>
@@ -72,9 +72,9 @@ Example: /set_caption 📕 File Name: {filename}
 ╭───────────⍟
 ├<b>👨‍💻 Dev : <a href="Jaat_Hunuman_Bhakat.t.me">🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a></b>
 ├<b>🔷 Brother: <a href="Jaat_Ghost_Owner.t.me">×‌× Mʀ. Jᴀᴀᴛ ᴀʟᴏɴᴇ »⃟🦅</a></b>
-├<b>🔷 Brother: <a href="3AnUrAg.t.me">©《@NUR∆G》™ Nothing</a></b>
+├<b>🔷 Brother: <a href="3AnUrAg.t.me">Nothing</a></b>
 ├<b>🔷 Brother: <a href="eoSama.t.me">Nothing</a></b>
-├<b>🔷 Brother: <a href="Shivaay.t.me">nothing </a></b>
+├<b>🔷 Brother: <a href="Shivaay.t.me">Nothing </a></b>
 ├<b>🔷 Brother: <a href="RTX.t.me">Nothing</a></b>
 ├<b>🔷 Brother: <a href="The.t.me">Nothing</a></b>
 ├<b>🔷 Brother: <a href="T.t.me">⚚ Nothing</a></b>
