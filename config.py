@@ -17,7 +17,7 @@ class Config(object):
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/e8b7439b7482e3ee0678e.mp4")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6535672136 6569573642').split()]
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6884532046 6414650128').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002000307644"))
 
@@ -28,11 +28,11 @@ class Config(object):
 
 class Txt(object):
     # part of text configuration
-    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more.\n• Crafted by <a href=https://t.me/Jaat_Hunuman_Bhakat>🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a> </b>"""
+    START_TXT = """<b>Welcome {} 👋\nUnleash the magic of file renaming, thumbnail swapping, video-to-file conversion, custom captions, and more.\n• Crafted by <a href=https://t.me/Jaat_Hanuman_Bhakat>🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a> </b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 My name: <a href=http://t.me/Gojo_Rename_bot>Gojo satoru</a>
-├🖥️ Developers: <a href=https://t.me/Jaat_Hunuman_Bhakat>🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a> 
+├🖥️ Developers: <a href=https://t.me/Jaat_Hanuman_Bhakat>🤍 𝗝ᴀᴀᴛ!! हनुमान भक्त 🚩</a> 
 ├📕 Library: <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
 ├✏️ Language: <a href=https://www.python.org>Pyᴛʜᴏɴ3</a>
 ├💾 Data Base: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
