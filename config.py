@@ -8,7 +8,7 @@ class Config(object):
     # pyro client config
     API_ID    = os.environ.get("API_ID", "22071527")
     API_HASH  = os.environ.get("API_HASH", "7a144f1eb4c0ef296ac0aef8c74d1e76")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6724874786:AAEiMemuDRlin5w_6LJ6U29bAnLFAZzhXro") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6943069928:AAHq63NJLAzuQDpcMkndy8BkGdyhCAYekcI") 
    
     # database config
     DB_NAME = os.environ.get("DB_NAME","kakashi")     
